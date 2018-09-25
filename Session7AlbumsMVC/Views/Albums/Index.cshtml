@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Session7AlbumsMVC.Models.Album>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Herp Derp</h2>
+
+<p>
+    <a href="/albums/Create" class="btn btn-primary">Create New</a>
+</p>
+
+@foreach (var item in Model) {
+    <div class="album">
+        <div class="artist">@item.Artist</div>
+        <div class="albumname">@item.Name</div>
+        <div class="release">@item.ReleaseDate</div>
+        <div class="coverArt"><a href="@item.YoutubeLink"><img class="coverImage" src="@item.CoverArt" /></a></div>
+    </div>
+}
+
+
